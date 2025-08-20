@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "trip-planner-crew"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+packages = [
+    { include = "trip_planner" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+crewai = ">=0.152.0"
+unstructured = "0.10.25"
+pyowm = "3.3.0"
+tools = ">=0.1.9"
+python-dotenv = "1.0.0"
+langchain = ">=0.3.27,<0.4.0"
+langchain-community = "*"
+crewai-tools = "^0.62.3"
+
+[tool.poetry.group.dev.dependencies]
+# add dev-only deps here
+
+[tool.pyright]
+useLibraryCodeForTypes = true
+exclude = [".cache"]
+
+[tool.ruff]
+select = ['E', 'W', 'F', 'I', 'B', 'C4', 'ARG', 'SIM']
+ignore = ['W291', 'W292', 'W293']
